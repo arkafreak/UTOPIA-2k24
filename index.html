@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/utopia.ico" id="favicon" type="image/x-icon">
+
+    <!----------ANIMATION FOR FAVICON ICON--------->
+    <script>
+        const faviconImages = [
+            "images/utopia.ico",
+            "images/utopia1.ico",
+            "images/utopia2.ico",
+            "images/utopia3.ico",
+        ];
+        function animateFavicon() {
+            let index = 0;
+            clearInterval(window.faviconInterval);
+            window.faviconInterval = setInterval(() => {
+                document.getElementById("favicon").href = faviconImages[index];
+                index = (index + 1) % faviconImages.length;
+            }, 1000); 
+        }
+        animateFavicon();
+    </script>
+    
+    <!----------------------------------------------------->
+
+    <meta name="UTOPIA 2k24" content="The annual cultural fest 2k24, of MCKVIE">
+    <title>
+        UTOPIA 2k24
+    </title>
+    <style>
+        #watermark {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            text-align: center;
+            opacity: 0.5;
+            z-index: 999;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo hd.png" style="width: 80px"></a>
+            <div class="nav-links" id="navLinks">
+                <div class="fa1"> 
+                    <i class="fa fa-times" onclick="hideMenu()"></i>        
+                </div>
+                <ul>
+                    <li><a href="https://www.mckvie.edu.in/" class= "gallery-btn">HOME</a></li>
+                    <li><a href="https://www.mckvie.edu.in/cultural-activities/#prettyPhoto" class= "gallery-btn">GALLERY</a></li>
+                    <li><a href="#schedule-section" class= "gallery-btn">SCHEDULE</a></li>
+                    <li><a href="#events-section" class= "events-btn">EVENTS & <br>COMPETITIONS </a></li>
+                    <li><a href="#cnt-section" class= "gallery-btn">CONTACT & <br>LOCATION</a></li>
+                </ul>
+            </div>
+            <div class="fa2">
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </div>
+            <!-- <img class="image1" src="images/naac-a.png"> -->
+        </nav>
+
+    <div class="text-box">
+        <h1>Embrace the cultural Kaleidoscope!</h1>
+        <h2>Annual cultural fest of MCKVIE</h2>
+        <p>Bigger better and larger.<br> Get ready to roll with the best of the best singers and bands only at <br> MCKV Institute of Engineering 243 G. T. Road (North), Liluah, Howrah – 711204.</p>
+    </div> 
+    <div class="logo">
+        <img src="images/utopia.png">
+    </div>
+    </section>
+<!------ COUNTDOWN ------>
+    <section class="countdown">
+        COUNTDOWN<div id="countdown"></div>ends on 18th, JAN 00:00:00
+    </section>
+
+
+
+    <!----------- SCHEDULE ------------->
+    <section class="schedule" id="schedule-section">
+        <video autoplay loop muted>
+            <source src="images/pexels-rostislav-uzunov-5680034 (1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav>
+            <div class="schedule-page">
+                <h1>SCHEDULE</h1>
+                
+                <p>Singing on 18th JAN<br> Band performance and DJ on 19th JAN</p>
+                <div class="row">
+                
+                    <div class="schedule-page-col1">
+                        <h3>SINGING</h3>
+                        <p1>Senjuti Das Nightingale enchantress.</p1>
+                    </div> 
+                
+                    <div class="schedule-page-col2">
+                        <h3>BAND</h3>
+                        <p1>T.R.A.P</p1>
+                    </div>
+                    <div class="schedule-page-col3">
+                        <h3>DJ</h3>
+                        <p1>DJ of the night by DJ SKULLZ</p1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+<!------------ EVENTS Section ----------->
+<section class="events" id="events-section">
+    <video autoplay loop muted>
+        <source src="images/pexels_videos_2022395 (1080p).mp4" type="video/mp4">
+    </video>
+    <div class="events-content">
+        <h1>EVENTS <br>&<br> COMPETITIONS</h1>
+        <!-- Add your events content here -->
+        <div class="owl-carousel">
+            <div data-description="Description for Event 1"><img src="flyer/beat battles.jpg" alt="Event 1"></div>
+            <div data-description="Description for Event 2"><img src="flyer/singing flyer.jpg" alt="Event 2"></div>
+            <div data-description="Description for Event 3"><img src="flyer/FACE PAINTING FLYER.jpg" alt="Event 3"></div>
+            <div data-description="Description for Event 4"><img src="flyer/fashion show.png" alt="Event 4"></div>
+            <div data-description="Description for Event 5"><img src="flyer/nonfirecookingflyer.jpg" alt="Event 5"></div>
+        </div>
+        <div id="eventDescription"></div>        
+    </div>
+</section>
+
+<!------------------ CONTACT ------------------->
+<section class="cnt" id="cnt-section">
+    <video autoplay loop muted>
+        <source src="images/pexels_videos_2022395 (1080p).mp4" type="video/mp4">
+    </video>
+    <h1>CONTACT FOR FURTHER QUERIES!</h1>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="button" onclick="sendEmail()">CONTACT US</button>
+    </form>
+      <!-------------MAP section-------------->
+    <div id="map-container"></div>
+        <div class="map" id="map">
+            <h1>LOCATION of MCKVIE</h1>
+            <iframe width="400" height="300" src="https://www.openstreetmap.org/export/embed.html?bbox=88.34541499614717%2C22.618021914523823%2C88.35043609142305%2C22.621191053592952&amp;layer=mapnik&amp;marker=22.61960649318803%2C88.3479255437851" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=22.61961&amp;mlon=88.34793#map=18/22.61961/88.34793&amp;layers=N">View Larger Map</a></small>
+        </div>
+    </div>
+    <div class="icons">
+        <a href="index.html"><img src="images/logo1.png" style="width: 20px"></a>
+        <a href="https://www.facebook.com/mckvieoriginal" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/mckvieofficial/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/company/mckvie/mycompany/" class="fa fa-linkedin"></a>
+    </div>
+    
+</section>
+
+
+
+<!-- JAVASCRIPT FOR TOGGLE MENU -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+    // Countdown Timer Script
+    var countDownDate = new Date("Jan 18, 2024 00:00:00").getTime();
+        var countdownElement = document.getElementById("countdown");
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                countdownElement.innerHTML = "EXPIRED";
+            }
+        }, 1000);
+</script>
+<!------------ Scripts for Carousel ------------>
+<script>
+    $(document).ready(function () {
+    var owl = $(".owl-carousel");
+
+    owl.owlCarousel({
+        items: 3,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        nav: true,
+        onTranslated: updateDescription, // Call updateDescription function after a slide transition
+    });
+
+    // Initial description update
+    updateDescription();
+
+    function updateDescription() {
+        var currentItem = $(".owl-item.active").index();
+        var description = $(".owl-item").eq(currentItem).find("div").data("description");
+
+        // Update the description in the #eventDescription element
+        $("#eventDescription").text(description);
+    }
+});
+</script>
+
+<!-- JAVASCRIPT FOR EMAIL.JS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    emailjs.init("cyf8oYqhrClrLv7mV"); // Replace with your Email.js user ID
+
+    function sendEmail() {
+        var templateParams = {
+            to_email: "freak.ghost11@gmail.com", // Replace with your email address
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+        };
+        var form = document.getElementById("contactForm");
+        var data = new FormData(form);
+        emailjs.send("service_w864a8m", "template_s2plp9j", templateParams)
+            .then(function (response) {
+                console.log("Email sent successfully:", response);
+                document.body.classList.add("thankYouClass");
+                // You can add additional actions here, such as showing a success message
+            })
+            .catch(function (error) {
+                console.error("Error sending email:", error);
+                // You can add additional actions here, such as showing an error message
+            });
+    }
+</script>
+<!----- Scripts for chatbot ------>
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "-GkWkQyLKZ0-62U25jBY4",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="-GkWkQyLKZ0-62U25jBY4"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+
+<!----- Scripts for COOKIES ------>
+
+<script>
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    // Function to get a cookie value by name
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Example: Set a cookie when the page is loaded
+    setCookie("visited", "true", 30);
+
+    // Example: Retrieve the value of the "visited" cookie
+    var visitedCookie = getCookie("visited");
+    if (visitedCookie) {
+        console.log("User has visited before.");
+        // Add your logic here for users who have visited before
+    } else {
+        console.log("First-time visitor.");
+        // Add your logic here for first-time visitors
+    }
+</script>
+
+
+    <div id="watermark">
+        <p>MADE BY:- </p>
+        <P>ARKA PRAVO DUTTA</p>
+    </div>
+    
+</body>
+</html>
