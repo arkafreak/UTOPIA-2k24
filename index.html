@@ -105,7 +105,7 @@
             <div class="schedule-page">
                 <h1>SCHEDULE</h1>
                 
-                <p>Band performance on 18th JAN<br> Singing and DJ on 19th JAN</p>
+                <p>Band performance on 18th JAN<br>Singing and DJ on 19th JAN</p>
                 <div class="row">
                 
                     <div class="schedule-page-col1">
@@ -133,15 +133,30 @@
     </video>
     <div class="events-content">
         <h1>EVENTS <br>&<br> COMPETITIONS</h1>
+
         <!-- Add your events content here -->
         <div class="owl-carousel">
-            <div data-description="Description for Event 1"><img src="flyer/beat battles.jpg" alt="Event 1"></div>
-            <div data-description="Description for Event 2"><img src="flyer/singing flyer.jpg" alt="Event 2"></div>
-            <div data-description="Description for Event 3"><img src="flyer/FACE PAINTING FLYER.jpg" alt="Event 3"></div>
-            <div data-description="Description for Event 4"><img src="flyer/fashion show.png" alt="Event 4"></div>
-            <div data-description="Description for Event 5"><img src="flyer/nonfirecookingflyer.jpg" alt="Event 5"></div>
+            
+            <div data-description="Click on the event poster to register for event 1" onclick="handleEventPosterClick()"><a href="https://docs.google.com/forms/d/1ovwFJhXt4pC5-IqVXjwPkjynRwVIDv4tesczSxs5YZI/viewform?pli=1&pli=1&edit_requested=true" target="_blank">
+                <img src="flyer/beat battles.jpg" alt="Event 1"></a></div>
+            <div data-description="Click on the event poster to register for event 2" onclick="handleEventPosterClick()"><a href="https://docs.google.com/forms/d/1ovwFJhXt4pC5-IqVXjwPkjynRwVIDv4tesczSxs5YZI/viewform?pli=1&pli=1&edit_requested=true" target="_blank">
+                <img src="flyer/singing flyer.jpg" alt="Event 2"></a></div>
+            <div data-description="Click on the event poster to register for event 3" onclick="handleEventPosterClick()"><a href="https://docs.google.com/forms/d/1ovwFJhXt4pC5-IqVXjwPkjynRwVIDv4tesczSxs5YZI/viewform?pli=1&pli=1&edit_requested=true" target="_blank">
+                <img src="flyer/FACE PAINTING FLYER.jpg" alt="Event 3"></a></div>
+            <div data-description="Click on the event poster to register for event 4" onclick="handleEventPosterClick()"><a href="https://docs.google.com/forms/d/1ovwFJhXt4pC5-IqVXjwPkjynRwVIDv4tesczSxs5YZI/viewform?pli=1&pli=1&edit_requested=true" target="_blank">
+                <img src="flyer/fashion show.png" alt="Event 4"></a></div>
+            <div data-description="Click on the event poster to register for event 5" onclick="handleEventPosterClick()"><a href="https://docs.google.com/forms/d/1ovwFJhXt4pC5-IqVXjwPkjynRwVIDv4tesczSxs5YZI/viewform?pli=1&pli=1&edit_requested=true" target="_blank">
+                <img src="flyer/nonfirecookingflyer.jpg" alt="Event 5"></a></div>
         </div>
-        <div id="eventDescription"></div>        
+        <div id="eventDescription"></div>    
+            
+    </div>
+    <div id="counter">
+        <video autoplay loop muted>
+            <source src="images/production_id_5091624 (1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        number of registrations so far: 0
     </div>
 </section>
 
@@ -319,7 +334,27 @@
         // Add your logic here for first-time visitors
     }
 </script>
+<script>
+    let eventCounter = 0;
 
+    // Function to handle event poster click
+    function handleEventPosterClick() {
+        // Increment the counter
+        eventCounter++;
+
+        // Update the counter display
+        updateCounterDisplay();
+    }
+
+    // Function to update the counter display
+    function updateCounterDisplay() {
+        // Find the counter element and update its content
+        const counterElement = document.getElementById("counter");
+        if (counterElement) {
+            counterElement.textContent = `number of registrations so far : ${eventCounter}`;
+        }
+    }
+</script>
 
     <div id="watermark">
         <p>MADE BY:- </p>
